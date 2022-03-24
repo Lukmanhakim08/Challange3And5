@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_item"
+    app:startDestination="@id/halamanAwalFragment">
+
+    <fragment
+        android:id="@+id/halamanAwalFragment"
+        android:name="com.example.challange3and5.SatuFragment"
+        android:label="fragment_halaman_awal"
+        tools:layout="@layout/fragment_halaman_awal" >
+        <action
+            android:id="@+id/get_screendua"
+            app:destination="@id/inputNamaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputNamaFragment"
+        android:name="com.example.challange3and5.DuaFragment"
+        android:label="fragment_input_nama"
+        tools:layout="@layout/fragment_input_nama" >
+        <action
+            android:id="@+id/get_screentiga"
+            app:destination="@id/tampilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tampilFragment"
+        android:name="com.example.challange3and5.TigaFragment"
+        android:label="fragment_tampil"
+        tools:layout="@layout/fragment_tampil" >
+        <action
+            android:id="@+id/get_screenempat"
+            app:destination="@id/identitasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/identitasFragment"
+        android:name="com.example.challange3and5.EmpatFragment"
+        android:label="fragment_identitas"
+        tools:layout="@layout/fragment_identitas" >
+        <action
+            android:id="@+id/back_screentiga"
+            app:destination="@id/tampilFragment" />
+    </fragment>
+</navigation>
